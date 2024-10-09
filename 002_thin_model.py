@@ -15,7 +15,7 @@ line_thin.slice_thick_elements(
 line['dhcc8'].knl[0] = 1e-4 # Add a horizontal kick
 line['dhcc8'].ksl[0] = 1e-4 # Add a vertical kick
 
-tw = line_thin.twiss4d()
+tw = line_thin.twiss4d(strengths=True)
 
 # To get the refernce trajectory rotation angle
 tt = line.get_table(attr=True)
