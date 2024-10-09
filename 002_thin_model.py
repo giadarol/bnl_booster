@@ -17,6 +17,10 @@ line['dhcc8'].ksl[0] = 1e-4 # Add a vertical kick
 
 tw = line_thin.twiss4d()
 
+# To get the refernce trajectory rotation angle
+tt = line.get_table(attr=True)
+tt.cols['angle_rad']
+
 import matplotlib.pyplot as plt
 plt.close('all')
 plt.figure()
