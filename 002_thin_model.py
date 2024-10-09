@@ -11,3 +11,5 @@ line_thin.slice_thick_elements(
         xt.Strategy(slicing=xt.Teapot(10), element_type=xt.Bend),
         xt.Strategy(slicing=xt.Teapot(10), element_type=xt.Quadrupole),
 ])
+
+tw = line_thin.twiss4d()
