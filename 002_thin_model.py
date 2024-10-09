@@ -12,4 +12,15 @@ line_thin.slice_thick_elements(
         xt.Strategy(slicing=xt.Teapot(10), element_type=xt.Quadrupole),
 ])
 
+line['dhcc8'].knl[0] = 1e-4 # Add a horizontal kick
+line['dhcc8'].ksl[0] = 1e-4 # Add a vertical kick
+
 tw = line_thin.twiss4d()
+
+import matplotlib.pyplot as plt
+plt.close('all')
+plt.figure()
+plt.plot(tw.s, tw.x, label='x')
+plt.plot(tw.s, tw.y, label='y')
+
+plt.show()
